@@ -11,4 +11,5 @@
 cat >> /etc/hosts <<EOF
 192.168.101.101  cluster1-master1
 192.168.101.201  cluster1-worker1
+192.168.101.301  cluster1-worker2
 EOF

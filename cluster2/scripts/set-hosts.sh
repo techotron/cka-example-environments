@@ -9,7 +9,7 @@
 
 # Update /etc/hosts about other hosts
 cat >> /etc/hosts <<EOF
-192.168.102.101  cluster2-master1
-192.168.102.201  cluster2-worker1
-192.168.102.202  cluster2-worker2
+192.168.57.101  cluster2-master1
+192.168.57.201  cluster2-worker1
+192.168.57.202  cluster2-worker2
 EOF

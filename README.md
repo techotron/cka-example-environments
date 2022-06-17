@@ -22,10 +22,10 @@ cluster1-worker2: 192.168.57.103
 
 For convienience, the bootstrap scripts does the following already:
 
-Disable swap
-Add apt gpg key
-Add kubernetes repo list
-Apt-get update
+- Disable swap
+- Add apt gpg key
+- Add kubernetes repo list
+- Apt-get update
 
 
 ## Prerequisites
@@ -59,5 +59,10 @@ If you want to destroy the environment run `./down.sh` in the cluster directory 
 ## Tasks
 There are 2 sets of tasks - one for cluster1 and another for cluster2. Cluster1 is for K8s objects/management and cluster2 is used just for installing the K8s controlplane components from scratch, using `kubeadm`.
 
+**Tip:** The tasks are best read from github.com directly as they use HTML elements to hide the answers!
+
 - [Cluster 1 Tasks](./tasks-cluster1.md)
 - [Cluster 2 Tasks](./tasks-cluster2.md)
+
+
+For an exam-like experience, try sticking to using only the docs in [kubenetes.io](https://kubernetes.io/docs/home/) and `kubectl explain`. I found learning how to naviage `kubectl explain` super helpful, even if it takes a while to get used to it. However, you'll still need to use the docs from kubernetes.io for some things (pro-tip: the search is your friend!)

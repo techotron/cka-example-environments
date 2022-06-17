@@ -14,6 +14,7 @@ This task is intended more as a troubleshooting rehersal and command memory as y
 <br><hr>
 <details>
   <summary>Click to show answer!</summary>
+  <br><hr>
     There isn't one correct answer to this task. The main aim is to familiarise yourself with the tools at your disposal for troubleshooting a broken cluster.<br><br>
     Try using the following to see if you can identify the root cause in the logs:<br><br>
     - journalctl -u kubelet<br>
@@ -35,6 +36,7 @@ This task is intended more as a troubleshooting rehersal and command memory as y
 <br><hr>
 <details>
   <summary>Click to show answer!</summary>
+  <br><hr>
     <pre>
         <code>
         k create deployment web –image=nginx:alpine –port=80 –replicas=3
@@ -56,6 +58,7 @@ Using the same deployment from the previous task:
 <br><hr>
 <details>
   <summary>Click to show answer!</summary>
+  <br><hr>
     <pre>
         <code>
         k scale deployment web –replicas=5
@@ -76,6 +79,7 @@ Using the same deployment from the previous task:
 <br><hr>
 <details>
   <summary>Click to show answer!</summary>
+  <br><hr>
     <pre>
         <code>
         k set image deployment web nginx=httpd:alpine3.15 –record (note that record is now deprecated)
@@ -97,6 +101,7 @@ Using the same deployment from the previous task:
 <br><hr>
 <details>
   <summary>Click to show answer!</summary>
+  <br><hr>
     <pre>
         <code>
         k create deployment nodeselector –image=nginx:alpine
@@ -126,6 +131,7 @@ Using the same deployment from the previous task:
 <br><hr>
 <details>
   <summary>Click to show answer!</summary>
+  <br><hr>
   Create the definition for the deployment first, and then add the affinity object to the yaml file before running a kubectl apply...
     <pre>
         <code>
@@ -174,6 +180,7 @@ Using the same deployment from the previous task:
 <br><hr>
 <details>
   <summary>Click to show answer!</summary>
+  <br><hr>
     <pre>
         <code>
         k create deployment stress –image=progium/stress (edit container command to the required params)
@@ -204,6 +211,7 @@ Using the same deployment from the previous task:
 <br><hr>
 <details>
   <summary>Click to show answer!</summary>
+  <br><hr>
     <pre>
         <code>
           k create configmap myconfigmap1 --from-literal=myFile="this is my data" --from-literal=myVar=myEnvVar
@@ -233,6 +241,7 @@ These commands aim to help in learning to filter and sort kubernetes objects. Th
 <br><hr>
 <details>
   <summary>Click to show answer!</summary>
+  <br><hr>
     <pre>
         <code>
         k get pods –all-namespaces –sort-by=.metadata.name
@@ -260,6 +269,7 @@ These commands aim to help in learning to filter and sort kubernetes objects. Th
 <br><hr>
 <details>
   <summary>Click to show answer!</summary>
+  <br><hr>
     <pre>
       <code>
       k create namespace netpol1 && k create namespace netpol2
@@ -335,6 +345,7 @@ These commands aim to help in learning to filter and sort kubernetes objects. Th
 <br><hr>
 <details>
   <summary>Click to show answer!</summary>
+  <br><hr>
     <pre>
         <code>
         k create namespace rbac1 && k create namespace rbac2
@@ -374,6 +385,7 @@ These commands aim to help in learning to filter and sort kubernetes objects. Th
 <br><hr>
 <details>
   <summary>Click to show answer!</summary>
+  <br><hr>
     <pre>
       <code>
       mkdir /data && echo “some data to put in the file” > /data/somefile.txt && k create namespace volumes
@@ -485,6 +497,7 @@ This will generate load to the HPA deployment. The replicas should start to incr
 <br><hr>
 <details>
   <summary>Click to show answer!</summary>
+  <br><hr>
     <pre>
         <code>
         k create namespace hpa

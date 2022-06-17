@@ -6,6 +6,7 @@ Spin up cluster2 and install a kubernetes cluster with 1 control plane node (`cl
 <br><hr>
 <details>
   <summary>Click to show answer!</summary>
+  <br><hr>
     <pre>
         <code>
         apt-get install -y docker.io kubeadm=1.21.0-00 kubelet=1.21.00-00 kubectl=1.21.0-00
@@ -28,6 +29,7 @@ Using the new cluster from task #1, upgrade the cluster to v1.23.0 ensuring you 
 <br><hr>
 <details>
   <summary>Click to show answer!</summary>
+  <br><hr>
     The process to do this is roughly:<br>
     - Control plane: corden, upgrade kubeadm version plan/apply, upgrade kubelet/kubectl, uncordon<br>
     - Worker node: corden, upgrade kubeadm/kubelet, uncordon (repeat for node 2)<br>
@@ -68,6 +70,7 @@ Using the new cluster from task #1, upgrade the cluster to v1.23.0 ensuring you 
 <br><hr>
 <details>
   <summary>Click to show answer!</summary>
+  <br><hr>
     You'll need the certs to access the etcd cluster. As the pod is a static pod, you can find the location of these on the host, by looking at the ETCd manifest (/etc/kubernetes/manifests). Use this manifest to choose a suitable location to save the backup (eg a mounted volume on the host)<br><br>
     The command for backing up the database is:<br>
     <pre>
